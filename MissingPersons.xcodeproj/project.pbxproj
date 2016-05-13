@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A35AAFA1CE6135500FE2E43 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A35AAF91CE6135500FE2E43 /* PersonCell.swift */; };
 		7AD4D3431CDF8ED1008213B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD4D3421CDF8ED1008213B1 /* AppDelegate.swift */; };
 		7AD4D3451CDF8ED1008213B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD4D3441CDF8ED1008213B1 /* ViewController.swift */; };
 		7AD4D3481CDF8ED2008213B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD4D3461CDF8ED2008213B1 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A35AAF91CE6135500FE2E43 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		7AD4D33F1CDF8ED1008213B1 /* MissingPersons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingPersons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD4D3421CDF8ED1008213B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AD4D3441CDF8ED1008213B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				7AD4D3421CDF8ED1008213B1 /* AppDelegate.swift */,
 				7AD4D3441CDF8ED1008213B1 /* ViewController.swift */,
+				7A35AAF91CE6135500FE2E43 /* PersonCell.swift */,
 				7AD4D3461CDF8ED2008213B1 /* Main.storyboard */,
 				7AD4D3491CDF8ED2008213B1 /* Assets.xcassets */,
 				7AD4D34B1CDF8ED2008213B1 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A35AAFA1CE6135500FE2E43 /* PersonCell.swift in Sources */,
 				7AD4D3451CDF8ED1008213B1 /* ViewController.swift in Sources */,
 				7AD4D3431CDF8ED1008213B1 /* AppDelegate.swift in Sources */,
 			);
@@ -288,6 +292,7 @@
 				7AD4D3531CDF8ED2008213B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
