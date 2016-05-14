@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var selectedImg: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let imagePicker = UIImagePickerController()
     
     let baseURL = "http://localHost:6069/img/"
     let missingPeople = [
@@ -27,6 +29,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        imagePicker.delegate = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(loadPicker(_:)))
+        tap.numberOfTapsRequired = 1
+        selectedImg.addGestureRecognizer(tap)
         
     }
 
@@ -48,6 +55,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return cell
         
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            selectedImg.image = pickedImage
+        }
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func loadPicker(gesture: UITapGestureRecognizer) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary  //Can use .Camera for camera, but need to check if exist
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
 
 }
+
+
+
+
+
+
+
 
