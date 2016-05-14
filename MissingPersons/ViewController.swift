@@ -12,7 +12,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var selectedImg: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let baseURL = "http://localHost:6069/img"
+    let baseURL = "http://localHost:6069/img/"
     let missingPeople = [
         "person1.jpg",
         "person2.jpg",
@@ -42,6 +42,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PersonCell", forIndexPath: indexPath) as! PersonCell
+        
+        let url = "\(baseURL)\(missingPeople[indexPath.row])"
+        cell.configureCell(url)
         return cell
         
     }
