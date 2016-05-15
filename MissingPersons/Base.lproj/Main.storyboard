@@ -81,17 +81,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ryv-5h-Uil">
-                                                    <rect key="frame" x="8" y="8" width="172" height="123"/>
+                                                    <rect key="frame" x="24" y="9" width="140" height="122"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="122" id="0KS-xh-scw"/>
+                                                        <constraint firstAttribute="width" constant="140" id="wUL-Cq-dOL"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="Ryv-5h-Uil" firstAttribute="centerY" secondItem="9d7-2V-Kvr" secondAttribute="centerY" id="1u6-Ed-wZe"/>
                                             <constraint firstItem="Ryv-5h-Uil" firstAttribute="bottom" secondItem="9d7-2V-Kvr" secondAttribute="bottomMargin" id="NVC-Il-aKl"/>
                                             <constraint firstItem="Ryv-5h-Uil" firstAttribute="trailing" secondItem="9d7-2V-Kvr" secondAttribute="trailingMargin" id="SG5-dJ-irY"/>
+                                            <constraint firstItem="Ryv-5h-Uil" firstAttribute="centerX" secondItem="9d7-2V-Kvr" secondAttribute="centerX" id="buW-9W-cza"/>
                                             <constraint firstItem="Ryv-5h-Uil" firstAttribute="top" secondItem="9d7-2V-Kvr" secondAttribute="topMargin" id="pXi-xb-sQm"/>
                                             <constraint firstItem="Ryv-5h-Uil" firstAttribute="leading" secondItem="9d7-2V-Kvr" secondAttribute="leadingMargin" id="uNF-V7-gM8"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="NVC-Il-aKl"/>
+                                                <exclude reference="SG5-dJ-irY"/>
+                                                <exclude reference="pXi-xb-sQm"/>
+                                                <exclude reference="uNF-V7-gM8"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="personImage" destination="Ryv-5h-Uil" id="p2e-gp-Kbu"/>
                                         </connections>

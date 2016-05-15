@@ -28,7 +28,9 @@ class PersonCell: UICollectionViewCell {
                 guard let data = data where error == nil else { return }
                 self.personImage.image = UIImage(data: data)
                 self.person.personImage = self.personImage.image
-                self.person.downloadFaceId()
+//                self.personImage.layer.borderWidth = 5.0
+//                self.personImage.layer.borderColor = UIColor.blueColor().CGColor
+                
             }
         }
     }
@@ -39,6 +41,14 @@ class PersonCell: UICollectionViewCell {
             completion(data: data, response: response, error: error)
         }.resume()
         
+    }
+    
+    func setSelected() {
+        
+        personImage.layer.borderWidth = 2.0
+        personImage.layer.borderColor = UIColor.yellowColor().CGColor
+        
+        self.person.downloadFaceId() 
     }
     
 }

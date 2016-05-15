@@ -15,6 +15,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var selectedImg: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var selectedPerson: Person?
+    
     let imagePicker = UIImagePickerController()
     
     
@@ -56,6 +58,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let person = missingPeople[indexPath.row]
         cell.configureCell(person)
         return cell
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        self.selectedPerson = missingPeople[indexPath.row]
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! PersonCell
+        //cell.configureCell(selectedPerson!)
+        cell.setSelected()
+        
         
     }
     
